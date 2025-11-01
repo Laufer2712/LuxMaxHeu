@@ -2,18 +2,23 @@
 <html lang="es">
 
 <head>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logoSolo.png" type="image/png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LuxMaxHeu - Soluciones innovadoras para impulsar tu negocio digital.">
     <title><?php echo SITE_NAME; ?></title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <!--<link rel="stylesheet" href="assets/css/index.css">-->
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/proyects.css">
     <link rel="stylesheet" href="assets/css/services.css">
     <link rel="stylesheet" href="assets/css/about.css">
-
     <link rel="stylesheet" href="assets/css/contact.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 
@@ -21,7 +26,7 @@
 
     <header>
         <div class="logo">
-            <img src="assets/img/logoCom.png" alt="<?php echo SITE_NAME; ?>" />
+            <img src="assets/img/logoEnt.png" alt="<?php echo SITE_NAME; ?>" />
         </div>
         <nav>
             <ul>
@@ -32,4 +37,10 @@
                 <li><a href="contact.php">Contacto</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
+
+
+    <script src="assets/js/main.js"></script>

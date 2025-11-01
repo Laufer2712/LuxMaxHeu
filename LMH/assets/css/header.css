@@ -1,127 +1,151 @@
-/* ======================================================
-   🔹 HEADER RESPONSIVE Y MODERNO (Estilo de la Imagen)
-====================================================== */
+:root {
+  --primary-color: #7522ab; /* Morado */
+  --secondary-color: #3a996b; /* Verde oscuro */
+  --accent-color: #1aad9c; /* Verde claro */
+  --text-primary: #121c27;
+  --background-color: #f0f4f8;
+}
 
-/* 1. Estructura principal del Header */
+/* Header general */
 header {
-  /* Fondo limpio y sin color sólido como en la imagen */
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil para "flotar" */
-  position: relative; /* Base para el menú hamburguesa */
-  padding: 0 30px;
-  height: 90px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 0 20px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
 
-/* 2. Logo */
-.header .logo {
+/* Sticky */
+header.sticky {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Logo */
+header .logo {
   display: flex;
   align-items: center;
-  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 header .logo img {
-  /* Asumiendo que el logo es un SVG o imagen con fondo transparente */
-  height: 35px; /* Más sutil, como en la referencia */
+  height: 70px;
   width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* 3. Navegación Desktop (Ocultamos el nav por defecto en mobile) */
+header .logo:hover img {
+  transform: scale(1.15) rotate(-5deg);
+  filter: brightness(1.2);
+}
+
+/* Navegación Desktop */
 nav {
   display: flex;
   align-items: center;
-  height: 100%;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px; /* Mayor separación entre enlaces */
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  color: var(
-    --text-primary,
-    #121c27
-  ); /* Usamos el gris corporativo para el texto */
   text-decoration: none;
+  color: var(--text-primary);
   font-weight: 600;
-  font-size: 1rem;
-  padding: 33px 0; /* Padding vertical para centrar visualmente y dar área de click */
-  transition: border-bottom 0.3s ease;
-  /* El estilo de la imagen usa una barra inferior sutil al hacer hover/active */
-  border-bottom: 3px solid transparent;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 25px 0;
 }
 
-nav a:hover,
-nav a.active {
-  color: var(--primary-color, #0056b3);
-  border-bottom: 3px solid var(--accent-color, #00d4ff); /* Barra azul cian para el estado activo */
+/* Línea de color */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 3px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
 }
 
-/* --- Menú Hamburguesa (Icono) --- */
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Toggle menu */
 .menu-toggle {
-  display: none; /* Oculto en desktop */
-  font-size: 1.8rem;
+  display: none;
+  font-size: 2rem;
   cursor: pointer;
-  color: var(--primary-color, #0056b3);
-  z-index: 101; /* Siempre visible por encima de la nav */
+  color: var(--primary-color);
+  z-index: 200;
 }
 
-/* ======================================================
-   🔹 RESPONSIVE PARA MÓVILES (Max-width 992px)
-====================================================== */
+.menu-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 992px) {
-  /* Mostrar icono de hamburguesa */
   .menu-toggle {
     display: block;
   }
 
-  /* Ocultar la navegación de desktop y hacerla de tipo "overlay" */
   nav {
     position: absolute;
-    top: 90px; /* Debajo del header fijo */
+    top: 80px;
     left: 0;
     width: 100%;
-    height: 0; /* Oculto por defecto */
+    background: #ffffff;
+    display: block; /* importante para mobile */
+    max-height: 0;
     overflow: hidden;
-    background: var(--white);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: height 0.4s ease-in-out;
-    display: block;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0;
+    z-index: 100;
   }
 
-  /* Estado JS para mostrar el menú */
   nav.open {
-    height: auto;
-    max-height: 400px; /* Valor seguro para evitar overflows */
-  }
-
-  nav ul {
-    flex-direction: column; /* Apilar enlaces verticalmente */
-    gap: 0;
+    max-height: 500px;
     padding: 10px 0;
   }
 
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
   nav a {
-    display: block; /* Ocupar todo el ancho para una mejor área de click */
-    padding: 15px 30px;
-    border-bottom: none; /* Quitamos la barra inferior en mobile */
+    display: block;
+    padding: 15px 20px;
     font-size: 1.1rem;
-    color: var(--text-primary, #121c27);
+    border-bottom: 1px solid #f0f0f0;
   }
 
   nav a:hover,
   nav a.active {
-    background: var(
-      --background-color,
-      #f0f4f8
-    ); /* Fondo suave en hover para mobile */
-    color: var(--primary-color, #0056b3);
+    background: var(--background-color);
+    color: var(--primary-color);
   }
+}
+
+/* Transiciones suaves */
+* {
+  transition: all 0.3s ease;
 }

@@ -1,6 +1,8 @@
 <?php include 'config/constants.php'; ?>
 <?php include 'includes/header.php'; ?>
 
+<link rel="stylesheet" href="assets/css/index.css">
+
 
 <section class="hero">
     <h1>El socio tecnológico ideal para guiar tu emprendimiento del concepto al crecimiento digital.</h1>
