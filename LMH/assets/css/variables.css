@@ -1,0 +1,10 @@
+:root {
+  --purple: #7522ab;
+  --green: #3a996b;
+  --green-bright: #1aad9c;
+
+  --text-dark: #222;
+  --text-light: #f8f8f8;
+  --bg-light: #fafafa;
+  --transition: all 0.3s ease;
+}
