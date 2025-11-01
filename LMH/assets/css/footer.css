@@ -1,0 +1,13 @@
+footer {
+  background: #7522ab;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #1aad9c;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}

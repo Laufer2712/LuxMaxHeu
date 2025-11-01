@@ -1,0 +1,127 @@
+/* ======================================================
+   🔹 HEADER RESPONSIVE Y MODERNO (Estilo de la Imagen)
+====================================================== */
+
+/* 1. Estructura principal del Header */
+header {
+  /* Fondo limpio y sin color sólido como en la imagen */
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil para "flotar" */
+  position: relative; /* Base para el menú hamburguesa */
+  padding: 0 30px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* 2. Logo */
+.header .logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .logo img {
+  /* Asumiendo que el logo es un SVG o imagen con fondo transparente */
+  height: 35px; /* Más sutil, como en la referencia */
+  width: auto;
+}
+
+/* 3. Navegación Desktop (Ocultamos el nav por defecto en mobile) */
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Mayor separación entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(
+    --text-primary,
+    #121c27
+  ); /* Usamos el gris corporativo para el texto */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 33px 0; /* Padding vertical para centrar visualmente y dar área de click */
+  transition: border-bottom 0.3s ease;
+  /* El estilo de la imagen usa una barra inferior sutil al hacer hover/active */
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-color, #0056b3);
+  border-bottom: 3px solid var(--accent-color, #00d4ff); /* Barra azul cian para el estado activo */
+}
+
+/* --- Menú Hamburguesa (Icono) --- */
+.menu-toggle {
+  display: none; /* Oculto en desktop */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary-color, #0056b3);
+  z-index: 101; /* Siempre visible por encima de la nav */
+}
+
+/* ======================================================
+   🔹 RESPONSIVE PARA MÓVILES (Max-width 992px)
+====================================================== */
+@media (max-width: 992px) {
+  /* Mostrar icono de hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar la navegación de desktop y hacerla de tipo "overlay" */
+  nav {
+    position: absolute;
+    top: 90px; /* Debajo del header fijo */
+    left: 0;
+    width: 100%;
+    height: 0; /* Oculto por defecto */
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: height 0.4s ease-in-out;
+    display: block;
+  }
+
+  /* Estado JS para mostrar el menú */
+  nav.open {
+    height: auto;
+    max-height: 400px; /* Valor seguro para evitar overflows */
+  }
+
+  nav ul {
+    flex-direction: column; /* Apilar enlaces verticalmente */
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  nav a {
+    display: block; /* Ocupar todo el ancho para una mejor área de click */
+    padding: 15px 30px;
+    border-bottom: none; /* Quitamos la barra inferior en mobile */
+    font-size: 1.1rem;
+    color: var(--text-primary, #121c27);
+  }
+
+  nav a:hover,
+  nav a.active {
+    background: var(
+      --background-color,
+      #f0f4f8
+    ); /* Fondo suave en hover para mobile */
+    color: var(--primary-color, #0056b3);
+  }
+}
