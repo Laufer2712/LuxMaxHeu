@@ -5,9 +5,11 @@
 
 
 <section class="hero">
-    <h1>El socio tecnológico ideal para guiar tu emprendimiento del concepto al crecimiento digital.</h1>
-    <p>Transformamos ideas en soluciones digitales que impulsan tu negocio.</p>
-    <a href="contact.php" class="btn-cta">Empecemos a Construir tu Visión</a>
+    <div class="hero-content">
+        <h1>El socio tecnológico ideal para guiar tu emprendimiento del concepto al crecimiento digital.</h1>
+        <p>Transformamos ideas en soluciones digitales que impulsan tu negocio.</p>
+        <a href="contact.php" class="btn-cta">Empecemos a Construir tu Visión</a>
+    </div>
 </section>
 
 <section class="services-preview">
@@ -27,4 +29,6 @@
         </div>
     </div>
 </section>
+
+
 <?php include __DIR__ . '/includes/footer.php'; ?>

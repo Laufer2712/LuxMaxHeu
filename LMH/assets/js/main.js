@@ -1,22 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
-    /* ===== MENÚ RESPONSIVE ===== */
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav a');
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-            menuToggle.classList.toggle('active');
+    // Sticky header
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('sticky', window.scrollY > 50);
+    });
+
+    // Función para cerrar menú
+    function closeMenu() {
+        nav.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuToggle.querySelector('i').className = 'fas fa-bars';
+    }
+
+    // Toggle menú
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nav.classList.toggle('open');
+        menuToggle.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        icon.className = nav.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+    // Cerrar menú al click en enlaces
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 992) closeMenu();
         });
+    });
 
-        // Cerrar menú al hacer clic fuera
-        document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-                nav.classList.remove('open');
-                menuToggle.classList.remove('active');
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', (e) => {
+        if (nav.classList.contains('open') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Cerrar al redimensionar
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 992 && nav.classList.contains('open')) closeMenu();
+    });
+
+
+    /* ===== SMOOTH SCROLL ===== */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href !== '') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
-    }
+    });
 
     /* ===== VOLVER ARRIBA ===== */
     const backToTopBtn = document.getElementById('backToTop');

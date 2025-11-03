@@ -6,22 +6,29 @@
   --background-color: #f0f4f8;
 }
 
-/* Header general */
+/* Header fijo */
 header {
   background: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 0 20px;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
+  transition: all 0.4s ease;
 }
 
-/* Sticky */
+/* Header sticky con efecto de scroll */
 header.sticky {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  height: 70px;
 }
 
 /* Logo */
@@ -36,6 +43,10 @@ header .logo img {
   height: 70px;
   width: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+header.sticky .logo img {
+  height: 60px;
 }
 
 header .logo:hover img {
@@ -64,6 +75,7 @@ nav a {
   font-size: 0.95rem;
   position: relative;
   padding: 25px 0;
+  transition: color 0.3s ease;
 }
 
 /* Línea de color */
@@ -90,14 +102,19 @@ nav a:hover {
 /* Toggle menu */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
   color: var(--primary-color);
-  z-index: 200;
+  z-index: 2000;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  padding: 5px;
 }
 
 .menu-toggle:hover {
   transform: scale(1.2);
+  color: var(--accent-color);
 }
 
 /* ===== MOBILE ===== */
@@ -106,46 +123,126 @@ nav a:hover {
     display: block;
   }
 
+  /* NAVEGACIÓN - OCULTA POR DEFECTO EN MOBILE */
   nav {
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 0;
     width: 100%;
     background: #ffffff;
-    display: block; /* importante para mobile */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-    padding: 0;
-    z-index: 100;
+    transition: max-height 0.4s ease;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
   }
 
+  /* CUANDO EL MENÚ ESTÁ ABIERTO */
   nav.open {
-    max-height: 500px;
-    padding: 10px 0;
+    max-height: 1000px; /* grande para cubrir todos los enlaces */
+    opacity: 1;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  /* Ajuste cuando header es sticky */
+  header.sticky + nav {
+    top: 70px;
   }
 
+  header.sticky + nav.open {
+    top: 70px;
+  }
+
+  /* Estilos para la lista */
   nav ul {
     flex-direction: column;
-    padding: 0;
-    margin: 0;
+    gap: 0;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease 0.1s;
+  }
+
+  nav.open ul {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav li {
+    width: 100%;
   }
 
   nav a {
     display: block;
     padding: 15px 20px;
     font-size: 1.1rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   nav a:hover,
   nav a.active {
     background: var(--background-color);
     color: var(--primary-color);
+    padding-left: 30px;
   }
+
+  /* Cambiar ícono cuando el menú está abierto */
+  .menu-toggle.active {
+    color: var(--accent-color);
+  }
+
+  .menu-toggle.active i::before {
+    content: "\f00d";
+  }
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--primary-color)
+  );
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #f1f1f1;
+}
+
+/* Espacio para compensar el header fijo */
+body {
+  padding-top: 80px;
+  margin: 0;
 }
 
 /* Transiciones suaves */
 * {
-  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
