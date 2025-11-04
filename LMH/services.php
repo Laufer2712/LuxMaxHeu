@@ -1,6 +1,7 @@
 <?php include('config/constants.php'); ?>
 <?php include('includes/header.php'); ?>
 
+<link rel="stylesheet" href="assets/css/services.css">
 
 <section>
     <h2>Servicios</h2>

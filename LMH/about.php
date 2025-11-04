@@ -2,6 +2,7 @@
 <?php include('includes/header.php'); ?>
 
 
+<link rel="stylesheet" href="assets/css/about.css">
 <section>
     <h2>Nosotros</h2>
     <p><strong>Misión:</strong> Transformar ideas en soluciones digitales rentables.</p>

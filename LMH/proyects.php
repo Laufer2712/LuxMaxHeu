@@ -2,9 +2,6 @@
 <?php include('includes/header.php'); ?>
 
 <link rel="stylesheet" href="assets/css/proyects.css">
-<link rel="stylesheet" href="assets/css/header.css">
-<link rel="stylesheet" href="assets/css/footer.css">
-
 <section>
     <h2>Proyectos / Portafolio</h2>
     <div class="portfolio-cards">
