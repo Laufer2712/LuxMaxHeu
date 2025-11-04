@@ -51,7 +51,7 @@
             <ul>
                 <li><a href="#"><i class="fas fa-cog"></i> Desarrollo Web</a></li>
                 <li><a href="#"><i class="fas fa-mobile-alt"></i> Apps Móviles</a></li>
-                <li><a href="#"><i class="fas fa-chart-line"></i> Marketing Digital</a></li>
+                <!-- <li><a href="#"><i class="fas fa-chart-line"></i> Marketing Digital</a></li>-->
                 <li><a href="#"><i class="fas fa-cloud"></i> Soluciones Cloud</a></li>
                 <li><a href="#"><i class="fas fa-shield-alt"></i> Ciberseguridad</a></li>
             </ul>
@@ -69,7 +69,7 @@
                     <i class="fab fa-twitter"></i>
                     <span>Twitter</span>
                 </a>
-                <a href="#" class="social-link instagram" title="Instagram">
+                <a href="https://www.instagram.com/lauriet_ftr/" class="social-link instagram" title="Instagram">
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
