@@ -15,7 +15,7 @@
                 <div class="card-image">
                     <img src="assets/img/QuotaSalud.jpg" alt="Proyecto 1">
                     <div class="card-overlay">
-                        <a href="#" class="btn-primary">Ver Detalles</a>
+                        <a href="https://www.quotasalud.com/QuotaSaludWeb/" target="_blank" class="btn-primary">Ver Detalles</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -41,7 +41,7 @@
                 <div class="card-image">
                     <img src="assets/img/ClubEstarBien.jpg" alt="Proyecto 2">
                     <div class="card-overlay">
-                        <a href="#" class="btn-primary">Ver Detalles</a>
+                        <a href="http://clubestarbien.com/ClubEstarBien/" target="_blank" class="btn-primary">Ver Detalles</a>
                     </div>
                 </div>
                 <div class="card-content">
