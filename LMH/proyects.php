@@ -13,17 +13,17 @@
         <div class="portfolio-cards">
             <div class="card">
                 <div class="card-image">
-                    <img src="assets/img/logoCom.png" alt="Proyecto 1">
+                    <img src="assets/img/QuotaSalud.jpg" alt="Proyecto 1">
                     <div class="card-overlay">
                         <a href="#" class="btn-primary">Ver Detalles</a>
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">Proyecto A</h3>
+                    <h3 class="card-title">Proyecto A: Pagina Web</h3>
                     <div class="card-details">
                         <div class="detail-item">
                             <span class="detail-label">Desafío:</span>
-                            <p>Mejorar eficiencia interna.</p>
+                            <p>Mejorar eficiencia externa.</p>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Solución:</span>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Resultados:</span>
-                            <p class="highlight">+30% eficiencia.</p>
+                            <p class="highlight">+90% eficiencia.</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
 
             <div class="card">
                 <div class="card-image">
-                    <img src="assets/img/logoCom.png" alt="Proyecto 2">
+                    <img src="assets/img/ClubEstarBien.jpg" alt="Proyecto 2">
                     <div class="card-overlay">
                         <a href="#" class="btn-primary">Ver Detalles</a>
                     </div>
