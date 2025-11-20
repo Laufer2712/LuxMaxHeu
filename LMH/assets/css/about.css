@@ -364,3 +364,109 @@ body {
     font-size: 1rem;
   }
 }
+/* ================================
+   TEAM SECTION REFINADO
+================================ */
+
+.team-section {
+  padding: 100px 0;
+  background: var(--bg-lighter);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 45px;
+  margin-top: 50px;
+}
+
+.team-card {
+  background: var(--text-light);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  border: 1px solid #e6e6e6;
+  position: relative;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Foto centrada estilo tarjeta de presentación */
+
+.team-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 25px;
+  box-shadow: none; /* sin sombra */
+  border: none; /* sin borde */
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header nombre + letra */
+.team-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* Mini letra estilo insignia */
+.team-mini-letter {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-mini-letter img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Nombre */
+.team-card h3 {
+  color: var(--primary-color);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  margin-left: 0px;
+}
+
+/* Descripción */
+.team-card p {
+  margin-top: 15px;
+  text-align: justify;
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-mini-letter {
+    width: 30px;
+    height: 30px;
+  }
+}

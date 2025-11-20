@@ -4,7 +4,7 @@
         <!-- Sección de información de la empresa -->
         <div class="footer-section company-info">
             <div class="footer-logo">
-                <h3>LMH Innovations</h3>
+                <h3>LMH Core</h3>
                 <p class="tagline">Innovación y excelencia en cada proyecto</p>
             </div>
             <p class="address"><?php echo ADDRESS; ?></p>

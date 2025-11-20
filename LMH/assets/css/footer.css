@@ -627,11 +627,12 @@ footer::before {
 
 .newsletter {
   margin-top: 1.5rem;
-  padding: 1.2rem;
+  padding: 1rem 1.5rem;
   background: var(--card-bg);
   border-radius: 8px;
   border-left: 3px solid var(--accent-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-left: auto;
 }
 
 .newsletter h4 {
@@ -646,7 +647,7 @@ footer::before {
 
 .newsletter-form input {
   flex: 1;
-  padding: 0.7rem;
+  padding: 0.5rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.7);
@@ -668,7 +669,7 @@ footer::before {
   color: white;
   border: none;
   border-radius: 4px;
-  width: 40px;
+  padding: 0.2rem 1.2rem; /* añade espacio horizontal */
   cursor: pointer;
   transition: var(--transition);
   display: flex;

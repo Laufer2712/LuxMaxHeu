@@ -1,6 +1,6 @@
 <?php
-define('SITE_NAME', 'LMH Innovations & Solutions');
-define('EMAIL', 'LMH.innovations.and.solutions@gmail.com
+define('SITE_NAME', 'LMH Core');
+define('EMAIL', 'lmh.core78@gmail.com
 ');
-define('PHONE', '+58 412-829-3284');
+define('PHONE', '+58 424-231-5347');
 define('ADDRESS', 'Venezuela, Caracas');

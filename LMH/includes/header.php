@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <link rel="icon" href="assets/img/logoSolo.png" type="image/png">
+    <link rel="icon" href="assets/img/Log.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LuxMaxHeu - Soluciones innovadoras para impulsar tu negocio digital.">
@@ -20,7 +20,7 @@
 
     <header>
         <div class="logo">
-            <img src="assets/img/logoEnt.png" alt="<?php echo SITE_NAME; ?>" />
+            <img src="assets/img/LogVerti.png" alt="<?php echo SITE_NAME; ?>" />
         </div>
 
         <nav>

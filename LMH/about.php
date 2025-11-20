@@ -10,6 +10,65 @@
     </div>
 </section>
 
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Nuestro Equipo</h2>
+
+        <div class="team-grid">
+
+            <!-- Laura -->
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/img/team/Laura.jpg" alt="Laura">
+                </div>
+
+                <div class="team-header">
+                    <span class="team-mini-letter">
+                        <img src="assets/img/L.png" alt="L">
+                    </span>
+                    <h3>aura Toro</h3>
+                </div>
+
+                <p>Especialista en desarrollo y arquitectura web. Lidera la estrategia técnica y las soluciones digitales.</p>
+            </div>
+
+            <!-- Marsibel -->
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/img/team/Marsibel.jpg" alt="Marsibel">
+                </div>
+
+                <div class="team-header">
+                    <span class="team-mini-letter">
+                        <img src="assets/img/M.png" alt="M">
+                    </span>
+                    <h3>arsibel Soares</h3>
+                </div>
+
+                <p>Experta en gestión operativa, análisis de procesos y coordinación administrativa del proyecto.</p>
+            </div>
+
+            <!-- Hector -->
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/img/team/Hector.jpg" alt="Hector">
+                </div>
+
+                <div class="team-header">
+                    <span class="team-mini-letter">
+                        <img src="assets/img/H.png" alt="H">
+                    </span>
+                    <h3>éctor Baptista</h3>
+                </div>
+
+                <p>Creativo y especialista en diseño digital. Se encarga de la identidad visual y experiencia del usuario.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <section class="mission-vision">
     <div class="container">
         <div class="mv-grid">
