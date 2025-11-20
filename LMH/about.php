@@ -12,7 +12,7 @@
 
 <section class="team-section">
     <div class="container">
-        <h2 class="section-title">Nuestro Equipo</h2>
+        <h2 class="section-title">Nuestros Líderes</h2>
 
         <div class="team-grid">
 

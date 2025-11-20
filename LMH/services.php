@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="assets/css/services.css">
 
 <section>
-    <h2>Servicios</h2>
+    <h2 id="why-title" class="section-title">Servicios</h2>
     <div class="service-cards">
         <div class="card">
             <h3>Plataformas de Alto Impacto</h3>
